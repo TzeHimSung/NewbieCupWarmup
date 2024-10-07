@@ -1,1 +1,4 @@
 .vscode
+main.cpp
+main.out
+compile_and_run.sh
