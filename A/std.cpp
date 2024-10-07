@@ -23,7 +23,7 @@ void solve() {
         }
         cardCount.insert(currentCard);
     }
-    // 手牌均为幺九牌，且统计map包含十三张牌，必为十三面听牌
+    // 手牌均为幺九牌，且统计set包含十三种牌，必为十三面听牌
     if (cardCount.size() == cardsNeeded.size()) {
         cout << "YES\n";
         cout << "1m 1p 1s 1z 2z 3z 4z 5z 6z 7z 9m 9p 9s\n";
@@ -42,7 +42,7 @@ void solve() {
             break;
         }
     }
-    // 如果你会set_difference这个比较偏门的STL函数就更好了(它在algorithm库)
+    // 如果你会set_difference这个比较冷门的STL函数就更好了(它在algorithm库)
     // set_difference(
     //     cardsNeeded.begin(), cardsNeeded.end(),
     //     cardCount.begin(), cardCount.end(),
