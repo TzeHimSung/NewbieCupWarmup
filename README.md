@@ -1,6 +1,8 @@
-# 新生杯热身赛组题
-- 十三幺
+# Newbie cup warm up contest
+
+## 
+- [国士无双](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/A/description.md)
 - 打牌模拟
-- 卷积计算
-- 脑筋急转弯
+- 卷积计算(拟删除)
 - 加法dfs
+- 脑筋急转弯
