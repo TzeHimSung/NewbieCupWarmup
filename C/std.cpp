@@ -25,6 +25,7 @@ ll dfs(ll currentNum, int position) {
 
 void solve() {
     cin >> expr;
+    // 由于dfs会使得表达式重复，故需除2
     cout << dfs(0, 0) / 2 << endl;
 }
 
