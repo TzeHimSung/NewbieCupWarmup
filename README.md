@@ -3,6 +3,5 @@
 ## 
 - [国士无双](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/A/description.md)
 - [ONU!](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/B/description.md)
-- 卷积计算(拟删除)
-- 加法dfs
-- 脑筋急转弯
+- [好多表达式](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/C/description.md)
+- [排名之谜](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/D/description.md)
