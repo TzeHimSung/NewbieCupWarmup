@@ -22,23 +22,23 @@ void solve() {
     Player charlie = Player("Charlie", sc);
     Player david = Player("David", sd);
     // 定义姓名首字母 -> Player*映射，方便修改对应玩家的状态
-    map<char, Player*>personMapping = {
+    map<char, Player*>playerMapping = {
         {'a', &alice},
         {'b', &bob},
         {'c', &charlie},
         {'d', &david},
     };
-    Player* curr = &alice;  // 当前玩家
-    Player* last = nullptr;  // 上一个玩家
+    Player* currPlayer = &alice;  // 当前玩家
+    Player* lastPlayer = nullptr;  // 上一个玩家
     // 退出条件: 当前玩家卡组为空
-    while (curr->idx < (int)curr->stack.size()) {
-        last = curr;
+    while (currPlayer->idx < (int)currPlayer->stack.size()) {
+        lastPlayer = currPlayer;
         // 把当前玩家更新为弃牌上的字母开头的玩家
-        curr = personMapping[curr->stack[curr->idx]];
+        currPlayer = playerMapping[currPlayer->stack[currPlayer->idx]];
         // 弃牌
-        last->idx++;
+        lastPlayer->idx++;
     }
-    cout << curr->name << endl;
+    cout << currPlayer->name << endl;
 }
 
 int main() {
