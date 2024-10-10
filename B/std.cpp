@@ -12,6 +12,10 @@ struct Player {
     Player(string _name, string _stack) {
         name = _name, stack = _stack, idx = 0;
     }
+
+    char getNextPlayer() {
+        return stack[idx];
+    }
 };
 
 void solve() {
@@ -34,7 +38,7 @@ void solve() {
     while (currPlayer->idx < (int)currPlayer->stack.size()) {
         lastPlayer = currPlayer;
         // 把当前玩家更新为弃牌上的字母开头的玩家
-        currPlayer = playerMapping[currPlayer->stack[currPlayer->idx]];
+        currPlayer = playerMapping[currPlayer->getNextPlayer()];
         // 弃牌
         lastPlayer->idx++;
     }
