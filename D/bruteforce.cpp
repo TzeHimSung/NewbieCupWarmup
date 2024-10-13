@@ -7,12 +7,12 @@ const int TOTAL_PLAYERS = 5;
 
 struct Player {
     string name;
-    int r1_rank, r2_rank, score, total_rank;
+    int r1_rank, r2_rank, score;
 
     Player() {}
     Player(string _name, int _r1_rank, int _r2_rank) {
         name = _name, r1_rank = _r1_rank, r2_rank = _r2_rank;
-        score = _r1_rank + _r2_rank, total_rank = 0;
+        score = _r1_rank + _r2_rank;
     }
 
     bool operator<(const Player& rhs) const {
