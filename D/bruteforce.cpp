@@ -44,6 +44,7 @@ set<int> simulate(int j_r1_rank, int j_r2_rank) {
                                 for (int d_r2_rank = 1; d_r2_rank <= TOTAL_PLAYERS; d_r2_rank++) {
                                     set<int>r1_rank = { a_r1_rank, b_r1_rank, c_r1_rank, d_r1_rank, j_r1_rank };
                                     set<int>r2_rank = { a_r2_rank, b_r2_rank, c_r2_rank, d_r2_rank, j_r2_rank };
+                                    // 由于每一轮内不存在排名并列的情况，需要剔除不合法的排名结果
                                     if ((int)r1_rank.size() != TOTAL_PLAYERS || (int)r2_rank.size() != TOTAL_PLAYERS) {
                                         continue;
                                     }
