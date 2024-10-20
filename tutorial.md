@@ -43,7 +43,8 @@ P.S: 最坏情况为$O(400000)$，标程在使用STL的情况下只跑了$7ms$�
 通过仔细阅读样例解释或手动构造样例，~~不难猜到~~大概、也许、可能猜到，`JHSeng`的排名是通过`n`、`x`与`y`**线性计算**得到的。  
 怎么印证这个想法是正确的呢？即使没有这个想法也没关系。直接考虑**打表**，枚举`JHSeng`第1、2轮所有的排名，计算所有可能的最好排名与最坏排名。  
 打表代码见[此处](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/D/bruteforce.cpp)  
-这段代码的运行结果如下
+这份代码的执行效率比较低，`n=6`时要跑比较久的时间。这里有一份更好的打表[实现](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/D/bruteforce2.cpp)，利用`STL`的`next_permutaion`与`c++20`的`ranges`库优化了写法，仅供参考。  
+打表代码的运行结果如下
 ```shell
 best rank result
 1 1 1 1 2 
