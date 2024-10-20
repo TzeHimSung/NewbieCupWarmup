@@ -3,3 +3,4 @@ main.cpp
 main.out
 compile_and_run.sh
 Makefile
+.DS_Store
