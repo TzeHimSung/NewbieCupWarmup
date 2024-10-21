@@ -1,5 +1,5 @@
 def solve():
-    n = int(input())  # Read input as an integer
+    n = int(input())  # Read
     if n == 1:
         print("7 6")
     elif n == 2:
