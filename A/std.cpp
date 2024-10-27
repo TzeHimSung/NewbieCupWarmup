@@ -42,12 +42,6 @@ void solve() {
             break;
         }
     }
-    // 如果你会set_difference这个比较冷门的STL函数就更好了(它在algorithm库)
-    // set_difference(
-    //     cardsNeeded.begin(), cardsNeeded.end(),
-    //     cardCount.begin(), cardCount.end(),
-    //     ostream_iterator<string>(cout, "\n")
-    // );
 }
 
 int main() {
