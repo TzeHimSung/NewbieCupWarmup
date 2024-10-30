@@ -11,13 +11,13 @@
 2. 有且只有一种情况，手牌能形成`十三面听`(十三种幺九牌全为听牌)：每种幺九牌均出现在手牌中。    
 3. `单吊`(只听一张牌)时，手牌中幺九牌的种类只可能为十二种。  
 
-按以上思路，依次检查手牌即可。  
+按以上思路，依次检查手牌即可，详见[标程](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/A/std.cpp)。  
 
 ## B. ONU!
 
 非常无聊的模拟题，以至于题解根本不知道该写什么，直接模拟一遍游戏过程就可以了。 
 
-主要问题在于如何优雅地维护玩家卡组信息。标程提供了一种借助`struct`和`map`维护的方法，仅供参考。 
+主要问题在于如何优雅地维护玩家卡组信息。[标程](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/B/std.cpp)提供了一种借助`struct`和`map`维护的方法，仅供参考。 
 
 ## C. 好多表达式
 
@@ -34,7 +34,7 @@
 
 每次遍历完数字，表达式和即为`数组和`+`构造中数字`之和。 
 
-这种方式会将每条表达式构造两次，所以不要忘记除 $2$。  
+这种方式会将每条表达式构造两次，所以不要忘记除 $2$，详见[标程](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/C/std.cpp)。  
 
 ## D. 排名之谜
 
@@ -44,9 +44,9 @@
 
 ### Solution 1. 打表
 
-只凭肉眼、弱样例和手动构造样例，难以观察 $n$ 、 $x$ 、 $y$ 与答案的关系。不妨考虑**打表**，枚举`JHSeng`第1、2轮所有的排名，计算所有可能的最好排名与最坏排名。 
-打表代码见[此处](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/D/bruteforce.cpp) 。
-这份代码的执行效率比较低， $n=6$ 时要跑比较久的时间。这里有一份更好的打表[实现](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/D/bruteforce2.cpp)，利用`STL`的`next_permutaion`优化了写法，仅供参考。 
+只凭肉眼、弱样例和手动构造样例，难以观察 $n$ 、 $x$ 、 $y$ 与答案的关系。不妨考虑**打表**，枚举`JHSeng`第1、2轮所有的排名，计算所有可能的最好排名与最坏排名。   
+打表代码见[此处](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/D/bruteforce.cpp) 。  
+这份代码的执行效率比较低， $n=6$ 时要跑比较久的时间。这里有一份更好的打表[实现](https://github.com/TzeHimSung/NewbieCupWarmup/blob/main/D/bruteforce2.cpp)，利用`STL`的`next_permutaion`优化了写法，仅供参考。  
 打表代码的运行结果如下：
 
 ```shell
@@ -109,18 +109,16 @@ $$
 
 注意：1既不是质数也不是合数！
 
-### Solution 1. 找规律
+### Solution 1. 构造
 
 奇数输出 $3$ , $n \bigoplus 3$ ，偶数输出 $2$ , $n \bigoplus 2$ 
 
 其中第二个数总是偶数，发现小于4的时候特判就行了：
 
-1：7 6
-
-2：11 9
-
-3：7 4
+- $n=1$ 时，令 $a=7$ ， $b=6$
+- $n=2$ 时，令 $a=11$ ， $b=9$
+- $n=3$ 时，令 $a=7$ ， $b=4$
 
 ### Solution 2. 枚举
 
-从小到大枚举2-n*2的质数，枚举若干个就能出答案了（至多10个）
+从小到大枚举从 $2$ 到 $2n$ 的质数，枚举若干个就能出答案了（至多 $10$ 个）
