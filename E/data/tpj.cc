@@ -54,7 +54,7 @@ int check()
     ll a = ouf.readLong();
     ll b = ouf.readLong();
    
-    if (a < 2 || b < 2 ) {
+    if (a<=1||b<=1||a>1e18||b>1e18 ) {
         flag = 1;
         return 0;
     }
